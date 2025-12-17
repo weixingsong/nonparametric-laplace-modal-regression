@@ -82,6 +82,7 @@ Sample sizes: n = {200, 500}
 Reliability ratios: RR = {0.75, 0.90}
 
 ## Method Notation in Code
+
 Corrected: Proposed method (LocPoly in manuscript)
 
 Huang: Zhou & Huang (2016) LocLinear method
@@ -92,7 +93,7 @@ Naive: Naive method ignoring measurement error
 
 data*.results files containing simulation outputs
 
-#Support
+### Support
 For questions or comments about this code, please contact:
 
 Weixing Song - weixing@ksu.edu
