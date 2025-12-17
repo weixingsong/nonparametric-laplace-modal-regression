@@ -33,42 +33,78 @@ simulation/
 ├── p=1/
 
 │   ├── Simulation1_Estimated.R         # Simulation 1 results (Local linear modal regression)
+
 │   ├── Simulation2_Estimated.R         # Simulation 2 results (Local linear modal regression)
+
 │   ├── optimcor.R                      # Proposed estimation method (subroutine)
+
 │   ├── meanshift_huang.R               # Zhou & Huang (2016) meanshift method (subroutine)
+
 │   ├── hss.option4.R                        # Proposed bandwidth selection  (Corrected-I) (subroutine)
+
 │   ├── bandsel_huang.R                  # CV-SIMEX bandwidth selector (subroutine)
+
 │   ├── naive.option4.R                    # Naive-h method (subroutine)
+
 │   ├── CLy.bandwidth.R                  # Proposed bandwidth selection (Corrected-II) (subroutine)
+
 │   ├── bandwidth_selection.R         # Naive bandwidth selection (subroutine)
+
 │   ├── hss.fix_h1_5.R              # Corrected-I with fixed h1= n^{-1/5} (subroutine)
+
 │   ├── hss.fix_h1_8.R              # Corrected-I with fixed h1= n^{-1/8} (subroutine)
+
 │   ├── naive.fix.h1_5.R           # Naive-h with fixed h1= n^{-1/5} (subroutine)
+
 │   ├── naive.fix.h1_8.R           # Naive-h with fixed h1= n^{-1/8} (subroutine)
+
 │   ├── data1.results                   # Results for Simulation 1
+
 │   ├── data2.results                   # Results for Simulation 2
+
 │   └── fix_h1.results                   # Results for Simulation 1 with fixed h1 variants 
+
 │
+
 └── p=2/
+
     ├── Simulation1_Estimated.R         # Simulation 1 results (Local quadratic modal regression)
+    
     ├── Simulation2_Estimated.R         # Simulation 2 results (Local quadratic modal regression)
+    
     ├── optimcor.R                      # Proposed estimation method (subroutine)
+    
     ├── p=2_hss.option4.R               # Proposed bandwidth selection (Corrected-I) (subroutine)
+    
     ├── p=1_naive.option4.R             # Naive-h method (subroutine)
+    
     ├── p=2_CLy.bandwidth.R             # Proposed bandwidth selection (Corrected-II) (subroutine)
+    
     ├── p=2_bandwidth_selection.R       #  Naive bandwidth selection 
+    
     └── p=2.results                           # Results for  quadratic simulations
 
+
 case_study/
+
 └── Dietary_data/
+
     ├── estimate.full.R                 # Full estimation for Dietary data
+    
     ├── estimate.boot.R                 # Bootstrap estimation for Dietary data
+    
     ├── CLy.bandwidth.R                 # Proposed bandwidth selection (Corrected-II) (subroutine)
+    
     ├── bandsel_huang.R                 # CV-SIMEX bandwidth selector (subroutine)
+    
     ├── bandwidth_selection.R           # Naive_h bandwidth method (subroutine)
+    
     ├── optimcor.R                      # Proposed estimation method (subroutine)
+    
     ├── meanshift_huang.R               # Zhou & Huang (2016) meanshift method (subroutine)
+    
     └── wishreg.xls                     # Dietary dataset
+    
 
 
 # Simulation Scenarios
