@@ -1,72 +1,97 @@
-This README file provides supplementary information / reproducible research files for the manuscript 
-Title: "Nonparametric Modal Regression with Laplace Measurement Error"
+# Nonparametric Modal Regression with Laplace Measurement Error
 
-Authors: Yanfei He, Jianhong Shi, Weixing Song
-Code was written by Yanfei He, Jianhong Shi and Weixing Song
-In case of questions or comments please contact  weixing@ksu.edu.
+This repository contains all code and data to reproduce the results from the manuscript "Nonparametric Modal Regression with Laplace Measurement Error"
+by Yanfei He, Jianhong Shi, and Weixing Song.
 
-The code was written/evaluated in R with the following software versions:
-R version 4.4.0
-Processor: Inter(R) Core(TM) i5-8500 CPU @ 3.00GHz 3.00GHZ 
-Computer RAM: 8.00GB
 
-Matrix products: default
+#Overview
+This study develops nonparametric modal regression methods for datasets with Laplace measurement errors in covariates. The repository includes:
 
-attached  packages: MASS   KernSmooth readxl          
+Two simulation scenarios covering different estimator configurations
 
-This repository contains the following  files that can be used to reproduce all table and figures of the manuscript.
-It contains two subfolders containing the following files:
+A real-data case study using Dietary data
 
-./case_study/:
-This folder contains the following  files：
+Complete reproducible research files for all tables and figures
+
+# Environment
+R version: 4.4.0
+
+Processor: Intel(R) Core(TM) i5-8500 CPU @ 3.00GHz
+
+RAM: 8.00 GB
+
+Matrix products: Default
+
+# Required R Packages
  
-     ./Dietary data/
-     This subfolder folder contains the following code(.R) and Dietary data(.xls)
-         estimate.full.R
-         This R program generates the left-panel of Figure 9
+ MASS, KernSmooth, readxl
 
-         estimate.boot.R
-         This R program generates the right-panel of Figure 9
+#Repository Structure
 
-         CLy.bandwidth.R  bandsel_huang.R and  bandwidth_selection.R
-         Subroutine required by estimate.full.R and estimate.boot.R. In the code, bandwidth_selection.R bandsel_huang.R 
-         and CLy.bandwidth.R correspond to the proposed bandwidth selection method(Corrected-II) ,  CV-SIMEX bandwidth 
-         selector and the Naive_h method in the manuscript, respectively.
+simulation/
+├── p=1/
+│   ├── Simulation1_Estimated.R         # Simulation 1 results (Local linear modal regression)
+│   ├── Simulation2_Estimated.R         # Simulation 2 results (Local linear modal regression)
+│   ├── optimcor.R                      # Proposed estimation method (subroutine)
+│   ├── meanshift_huang.R               # Zhou & Huang (2016) meanshift method (subroutine)
+│   ├── hss.option4.R                        # Proposed bandwidth selection  (Corrected-I) (subroutine)
+│   ├── bandsel_huang.R                  # CV-SIMEX bandwidth selector (subroutine)
+│   ├── naive.option4.R                    # Naive-h method (subroutine)
+│   ├── CLy.bandwidth.R                  # Proposed bandwidth selection (Corrected-II) (subroutine)
+│   ├── bandwidth_selection.R         # Naive bandwidth selection (subroutine)
+│   ├── hss.fix_h1_5.R              # Corrected-I with fixed h1= n^{-1/5} (subroutine)
+│   ├── hss.fix_h1_8.R              # Corrected-I with fixed h1= n^{-1/8} (subroutine)
+│   ├── naive.fix.h1_5.R           # Naive-h with fixed h1= n^{-1/5} (subroutine)
+│   ├── naive.fix.h1_8.R           # Naive-h with fixed h1= n^{-1/8} (subroutine)
+│   ├── data1.results                   # Results for Simulation 1
+│   ├── data2.results                   # Results for Simulation 2
+│   └── fix_h1.results                   # Results for Simulation 1 with fixed h1 variants 
+│
+└── p=2/
+    ├── Simulation1_Estimated.R         # Simulation 1 results (Local quadratic modal regression)
+    ├── Simulation2_Estimated.R         # Simulation 2 results (Local quadratic modal regression)
+    ├── optimcor.R                      # Proposed estimation method (subroutine)
+    ├── p=2_hss.option4.R               # Proposed bandwidth selection (Corrected-I) (subroutine)
+    ├── p=1_naive.option4.R             # Naive-h method (subroutine)
+    ├── p=2_CLy.bandwidth.R             # Proposed bandwidth selection (Corrected-II) (subroutine)
+    ├── p=2_bandwidth_selection.R       #  Naive bandwidth selection 
+    └── p=2.results                           # Results for  quadratic simulations
+
+case_study/
+└── Dietary_data/
+    ├── estimate.full.R                 # Full estimation for Dietary data
+    ├── estimate.boot.R                 # Bootstrap estimation for Dietary data
+    ├── CLy.bandwidth.R                 # Proposed bandwidth selection (Corrected-II) (subroutine)
+    ├── bandsel_huang.R                 # CV-SIMEX bandwidth selector (subroutine)
+    ├── bandwidth_selection.R           # Naive_h bandwidth method (subroutine)
+    ├── optimcor.R                      # Proposed estimation method (subroutine)
+    ├── meanshift_huang.R               # Zhou & Huang (2016) meanshift method (subroutine)
+    └── wishreg.xls                     # Dietary dataset
 
 
-         optimcor.R and meanshift_huang.R
-         Subroutine required by estimate.full.R and estimate.boot.R.  In the code, optimcor.R and meanshift_huang.R correspond 
-         to the proposed estimate method  and  meanshift method in Zhou and Huang (2016).
+# Simulation Scenarios
+p=1: Local linear modal regression 
 
-         wishreg.xls
-         An XLS sheet containing Dietary data.
-    
-    
-./simulation/
-This folder contains the following two files, 
+p=2: Local quadratic modal regression
 
-   ./simulation 1/
-    This subfolder folder contains the following code(.R).
-        Simulation1_Estimated.R
-        All results of Table 1-2 and Figure 1-4 can be generated using the following parameter combinations: n = {200, 500},  RR = {0.75, 0.90}.  
- 
-       hss.option4.R  and naive.option4.R
-       Subroutine required by Simulation1_Estimated.R. hss.option4.R  and naive.option4.R correspond to the 
-       proposed bandwidth selection method(Corrected-I) and Naive-h method.
+Sample sizes: n = {200, 500}
 
-      bandsel_huang.R, optimcor.R and meanshift_huang.R
-      As well as ./Dietary data/.
+Reliability ratios: RR = {0.75, 0.90}
 
-   ./simulation 2/
-    This subfolder folder contains the following code(.R).
-       Simulation2_Estimated.R
-       All results of Table 3-4  and Figure 5-8 can be generated using the following parameter combinations: n = {200, 500},  RR = {0.75, 0.90}.
-      
+# Method Notation in Code
+Corrected: Proposed method (LocPoly in manuscript)
 
-      CLy.bandwidth.R  bandsel_huang.R and  bandwidth_selection.R, optimcor.R and meanshift_huang.R
-      As well as ./Dietary data/.
-    
-  results
-  Each folder's result file contains the results generated from within that folder. Specifically, these results correspond to 
-  the tables and figures presented in the manuscript. In the code, the Corrected , Huang, Corhuang and Naive correspond to the LocPoly, 
-  LocLinear LocPL and Naive presented in the manuscript. 
+Huang: Zhou & Huang (2016) LocLinear method
+
+Corhuang: Combined approach (LocPL in manuscript)
+
+Naive: Naive method ignoring measurement error
+
+#Output
+
+data*.results files containing simulation outputs
+
+#Support
+For questions or comments about this code, please contact:
+
+Weixing Song - weixing@ksu.edu
