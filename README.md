@@ -29,7 +29,9 @@ Matrix products: Default
 #Repository Structure
 
 simulation/
+
 ├── p=1/
+
 │   ├── Simulation1_Estimated.R         # Simulation 1 results (Local linear modal regression)
 │   ├── Simulation2_Estimated.R         # Simulation 2 results (Local linear modal regression)
 │   ├── optimcor.R                      # Proposed estimation method (subroutine)
