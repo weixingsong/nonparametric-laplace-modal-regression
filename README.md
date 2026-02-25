@@ -119,7 +119,7 @@ loaded via a namespace (and not attached):
 │ ├── FigureB18 DC.R      # Code to generate the DC test part of Figure B.18\
 │ ├── FigureB18 MCCM2.R    # Code to generate the MCCM2 test part of Figure B.18\
 │ ├── Model B3.R         # Main test code for Model B.3\
-│ ├── Model B3CK.R        # CvM and KS test code for Model B.3\\
+│ ├── Model B3CK.R        # CvM and KS test code for Model B.3\
 │ ├── Model B3DC.R       # DC test code for Model B.3\
 │ └── Model B3M2.R       # MCCM2 test code for Model B.3\
 
