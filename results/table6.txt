@@ -1,0 +1,5 @@
+# Simulation Results in Table 6 
+# 
+      beta0         beta1       phi         
+MCCL  -0.235(0.025) 0.178(0.06) 5.993(0.683)
+Naive -0.236(0.026) 0.13(0.043) 5.877(0.638)

@@ -1,0 +1,19 @@
+# Simulation Results in Table B.12 
+# 
+# Table B.12 -- mcclhatsd
+           beta0      beta1      beta2      beta3        phi
+Mean  0.16841638 0.08162179 0.08081816 0.27435007 0.62780545
+Stdev 0.03626508 0.01790709 0.01678676 0.04730464 0.09301594
+# 
+# Table B.12 -- mcclsd
+          beta0      beta1      beta2     beta3       phi
+Stdev 0.1727181 0.08563497 0.08422021 0.2837466 0.6504743
+# 
+# Table B.12 -- naivehatsd
+           beta0      beta1       beta2      beta3        phi
+Mean  0.13481409 0.05975345 0.059881049 0.23001650 0.57739056
+Stdev 0.01528342 0.00842602 0.008391741 0.02567175 0.07436321
+# 
+# Table B.12 -- naivesd
+          beta0      beta1      beta2     beta3       phi
+Stdev 0.1411452 0.06518686 0.06518033 0.2307378 0.5805852
