@@ -6,6 +6,7 @@ by Yanfei He, Jianhong Shi, and Weixing Song.
 ##  Overview
 
 This study develops parametric modal regression methods for datasets with error-contaminated covariates. The repository includes:
+
 - R codes to conduct all the simulation studies and real data analysis validating the proposed methods.
 - A master R-file to source all the R codes.
 - A folder containing all the intermediate results to quickly reproduces all the tables and figures in the paper.
@@ -16,38 +17,42 @@ Please refer to the repository structure described below for details.
  
 ##  Environment
 
-R version 4.4.0 (2024-04-24 ucrt)\
-Platform: x86_64-w64-mingw32/x64\
-Running under: Windows 10 x64 (build 19045)\
+R version 4.4.0 (2024-04-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 10 x64 (build 19045)
 Matrix products: default
 
 locale:
-[1] LC_COLLATE=Chinese (Simplified)_China.utf8\ 
-[2] LC_CTYPE=Chinese (Simplified)_China.utf8\   
-[3] LC_MONETARY=Chinese (Simplified)_China.utf8\
-[4] LC_NUMERIC=C\                               
-[5] LC_TIME=Chinese (Simplified)_China.utf8    \
 
-time zone: Asia/Shanghai\
-tzcode source: internal\
+[1] LC_COLLATE=Chinese (Simplified)_China.utf8 
+[2] LC_CTYPE=Chinese (Simplified)_China.utf8  
+[3] LC_MONETARY=Chinese (Simplified)_China.utf8
+[4] LC_NUMERIC=C                               
+[5] LC_TIME=Chinese (Simplified)_China.utf8    
+
+time zone: Asia/Shanghai
+tzcode source: internal
 
 attached base packages:
-[1] splines   stats4    stats     graphics  grDevices utils     datasets \
+
+[1] splines   stats4    stats     graphics  grDevices utils     datasets 
 [8] methods   base     
 
 other attached packages:
- [1] plot3Drgl_1.0.4      plot3D_1.4.1         rgl_1.3.1 \          
- [4] scatterplot3d_0.3-44 VGAM_1.1-11          dcov_0.1.1 \         
- [7] MultiRNG_1.2.4       pracma_2.4.4         latex2exp_0.9.6     \
-[10] gofgamma_1.0         readxl_1.4.3         matrixcalc_1.0-6  \  
-[13] smoothmest_0.1-3     MASS_7.3-60.2    \   
+
+ [1] plot3Drgl_1.0.4      plot3D_1.4.1         rgl_1.3.1           
+ [4] scatterplot3d_0.3-44 VGAM_1.1-11          dcov_0.1.1          
+ [7] MultiRNG_1.2.4       pracma_2.4.4         latex2exp_0.9.6     
+[10] gofgamma_1.0         readxl_1.4.3         matrixcalc_1.0-6   
+[13] smoothmest_0.1-3     MASS_7.3-60.2       
 
 loaded via a namespace (and not attached):
- [1] knitr_1.47        cli_3.6.2         xfun_0.45         rlang_1.1.3\      
- [5] stringi_1.8.4     misc3d_0.9-1      jsonlite_1.8.8    glue_1.7.0 \      
- [9] htmltools_0.5.8.1 cellranger_1.1.0  base64enc_0.1-3   fastmap_1.2.0\    
-[13] lifecycle_1.0.4   stringr_1.5.1     compiler_4.4.0    htmlwidgets_1.6.4\
-[17] Rcpp_1.0.12       tcltk_4.4.0       digest_0.6.36     R6_2.5.1\         
+
+ [1] knitr_1.47        cli_3.6.2         xfun_0.45         rlang_1.1.3      
+ [5] stringi_1.8.4     misc3d_0.9-1      jsonlite_1.8.8    glue_1.7.0       
+ [9] htmltools_0.5.8.1 cellranger_1.1.0  base64enc_0.1-3   fastmap_1.2.0    
+[13] lifecycle_1.0.4   stringr_1.5.1     compiler_4.4.0    htmlwidgets_1.6.4
+[17] Rcpp_1.0.12       tcltk_4.4.0       digest_0.6.36     R6_2.5.1         
 [21] magrittr_2.0.3    tools_4.4.0      
 
 ##  Repository Structure
