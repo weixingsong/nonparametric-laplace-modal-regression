@@ -52,10 +52,9 @@ loaded via a namespace (and not attached):
 [21] magrittr_2.0.3    tools_4.4.0      
 
 ##  Repository Structure
-├── results/    # File containing simulation results (case study generate from master.R, other from InterResult file)\\
-├── InterResult/    # File containing simulation Inter-results \\
+├── results/    # File containing simulation results (case study generate from master.R, other from InterResult file)
+├── InterResult/    # File containing simulation Inter-results 
 ├── result_time.xlsx    # Directory containing simulation run time results
-
 ├── master.R              # Master script for repeating the entire simulation study
 ├── case_study/         # Real-world data case studies
 │ ├── AD data/         # Alzheimer's Disease (AD) data analysis section
